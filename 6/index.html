@@ -17,6 +17,9 @@ función que gatille todo el comportamiento debe recibir como parámetro el even
 lo gatilla y así se prevenga solo ese evento y no todos los eventos.
 Para la solución puedes inspirarte en: https://codepen.io/gabrieleromanato/pen/BdjBWd
 
+*Se tiene un párrafo, la idea es que al hacerle click derecho se agregue o remueva
+la clase cliqueable, el evento al ser cliqueaado se debe mostrar mostrar una alerta.
+
 -->
 
 
@@ -24,9 +27,16 @@ Para la solución puedes inspirarte en: https://codepen.io/gabrieleromanato/pen/
 <html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Ejercicio 6</title>
   </head>
   <body>
-
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <script>
+    $("p").on("contextmenu", function(){
+      $("p").toggleClass("cliqueable");
+      alert("Se cambió la clase");
+    });
+  </script>
   </body>
 </html>
